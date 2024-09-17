@@ -4,7 +4,6 @@ import Main from '../src/frontend/Main/Main';
 import './App.css';
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [headerOpaque, setHeaderOpaque] = useState(false);
 
   const handleScroll = () => {
@@ -15,9 +14,7 @@ function App() {
     }
   };
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+ 
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -29,8 +26,6 @@ function App() {
   return (
     <div className="App">
       <Navbar
-        menuOpen={menuOpen}
-        toggleMenu={toggleMenu}
         headerOpaque={headerOpaque}
       />
       <Main />
