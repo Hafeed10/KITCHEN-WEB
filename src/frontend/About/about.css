@@ -1,0 +1,22 @@
+/* Colours */
+:root {
+    --gold: #D4B254;
+    --gold-dark: #C19F41;
+    --green: #77DD22;
+    --white: #FFFFFF;
+    --grey-light: #EEEEEE;
+    --grey-mid: #777777;
+    --grey-dark: #222222;
+    --black: #000000;
+    --shadow-mid: #22222210;
+    --shadow-dark: #22222222;
+    --transparent: #00000000;
+    --logo-width: 100px;
+    --header-height: 9em;
+    --header-height-s: 3em;
+}
+.about{
+    background-color: var(--gold-dark);
+    height: 15vh;
+    padding: 20px;
+}

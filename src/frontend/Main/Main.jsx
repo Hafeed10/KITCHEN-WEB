@@ -3,7 +3,9 @@ import './main.css';
 
 function Main() {
   return (
+    // The Main Section Start
     <main className="main">
+      {/* // The main__splash Section Start*/}
       <section className="main__splash">
         <article className="article">
           <div className="article__content">
@@ -15,7 +17,9 @@ function Main() {
           </div>
         </article>
       </section>
+      {/* // The main__splash Section End */}
 
+      {/* // The main__blurb Section Start */}
       <section className="main__blurb">
         <article className="article">
           <picture className="article__picture">
@@ -27,14 +31,17 @@ function Main() {
             <h6>
               A kitchen is a room or part of a room where food is prepared,
               cooked, and washed. Kitchens can be found in homes, restaurants,
-              hospitals, schools, and other commercial establishments. A modern kitchen typically has: A stove, A sink with hot and cold
+              hospitals, schools, and other commercial establishments. A modern 
+              kitchen typically has: A stove, A sink with hot and cold
               water, A refrigerator, Worktops, and Cabinets.
             </h6>
             <button className="button-max">About Us</button>
           </div>
         </article>
       </section>
+      {/* // The main__blurb Section End */}
 
+      {/* // The main__testimonials Section Start */}
       <section className="main__testimonials">
         <article className="article">
           <div className="article__content">
@@ -43,12 +50,14 @@ function Main() {
             <h5>
               Since my first contact I have received a very high level of customer service and advice with my kitchen plans.
             </h5>
-            <h6 className="section-maxe">Shakeer, Malappuram</h6>
+            <h6 className="section-maxe">Muhammed Hafeex , Palakkad</h6>
             <button className="button-max">Frequently Asked Questions</button>
           </div>
         </article>
       </section>
+       {/* // The main__testimonials Section End */}
 
+      {/* // The main__gallery Section Start */}
       <section className="main__gallery">
         <h3>Customer Gallery</h3>
         <article className="article">
@@ -67,15 +76,18 @@ function Main() {
         </article>
         <button className="button1">View more</button>
       </section>
+      {/* // The main__gallery Section End */}
 
+      {/* // The Footer Section Start */}
       <footer>
         <div className="footer-section">
           <div className="imga">
             <img className="max" src="https://i.imgur.com/3zACXLF.png" alt="Logo" />
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi beatae
-              maxime est excepturi non neque expedita animi nostrum laudantium voluptates
-              quis itaque quia ea doloribus ipsa, architecto eligendi officia quibusdam.
+            A kitchen is a room or part of a room where food is prepared,
+              cooked, and washed. Kitchens can be found in homes, restaurants,
+              hospitals, schools, and other commercial establishments. A modern kitchen typically has: A stove, A sink with hot and cold
+              water, A refrigerator, Worktops, and Cabinets.
             </p>
           </div>
           <ul>
@@ -92,7 +104,9 @@ function Main() {
           </div>
         </div>
       </footer>
+      {/* // The Footer Section End */}
     </main>
+        // {/* // The Main Section End */}
   );
 }
 

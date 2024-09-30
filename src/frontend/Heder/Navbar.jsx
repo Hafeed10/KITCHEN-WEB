@@ -3,6 +3,7 @@ import { CiInstagram, CiTwitter, CiFacebook } from "react-icons/ci";
 import { RiMenu3Line } from "react-icons/ri";
 import { FaWindowClose } from "react-icons/fa";
 import './navbar.css';
+import { Link } from 'react-router-dom';
 
 function Header({ headerOpaque }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,10 +29,10 @@ function Header({ headerOpaque }) {
             <li className="menu__item"><CiInstagram className='menu__icon' /></li>
             <li className="menu__item"><CiTwitter className='menu__icon' /></li>
             <li className="menu__item"><CiFacebook className='menu__icon' /></li>
-            <li className="menu__item"><h4>Shop</h4></li>
-            <li className="menu__item"><h4>Plan my kitchen</h4></li>
-            <li className="menu__item"><h4>About us</h4></li>
+            <Link to='/about' className="menu__iteme"><h4>About us</h4></Link>
             <li className="menu__item"><h4>Gallery</h4></li>
+            <li className="menu__item"><h4>Plan my kitchen</h4></li>
+            <li className="menu__item"><h4>Shop</h4></li>
             <li className="menu__item">
               <button className="button">MY ORDER</button>
             </li>
