@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
+  "short_name": "KITCHEN-WEB",
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "./pngtree-cooking-and-kitchen-icon-png-image_719764-removebg-preview.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },

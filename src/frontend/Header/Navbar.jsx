@@ -33,7 +33,7 @@ function Header({ headerOpaque }) {
             <li className="menu__item"><CiFacebook className='menu__icon' /></li>
             <Link to='/about' className="menu__iteme"><h4>About us</h4></Link>
             <Link to='/gallery' className="menu__iteme"><h4>Gallery</h4></Link>
-            <li className="menu__item"><h4>Plan my kitchen</h4></li>
+            <Link to='/plan' className="menu__iteme"><h4>Plan my kitchen</h4></Link>
             <li className="menu__item"><h4>Shop</h4></li>
             <li className="menu__item">
               <button className="button">MY ORDER</button>

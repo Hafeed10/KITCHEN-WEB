@@ -1,13 +1,12 @@
 import React from 'react';
 import './about.css';
 import Lock1 from '../../assets/billionphotos1082174min.png'; // Correct path and import
-import Navbar from '../../frontend/Header/Navbar'; // Correct path and fix "Heder" typo to "Header"
 
 function About() {
   return (
     <>
       {/* Corrected inline styling syntax */}
-      <Navbar style={{ backgroundColor: 'gold' }} />
+      
       <div className='about' id='max'>
         <div className="about_section">
           <h2>Chef's Recipes</h2>
@@ -36,6 +35,9 @@ function About() {
               </picture>
               <picture className="article__picture">
                 <img src="https://i.imgur.com/wfR2hs8.png" alt="Gallery image 3" />
+              </picture>
+              <picture className="article__picture">
+                <img src="https://i.imgur.com/yP79MAU.png" alt="Gallery image 4" />
               </picture>
               <picture className="article__picture">
                 <img src="https://i.imgur.com/yP79MAU.png" alt="Gallery image 4" />

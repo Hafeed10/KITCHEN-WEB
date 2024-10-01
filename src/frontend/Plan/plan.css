@@ -1,0 +1,143 @@
+:root {
+    --gold: #D4B254;
+    --gold-dark: #C19F41;
+    --green: #77DD22;
+    --white: #FFFFFF;
+    --grey-light: #EEEEEE;
+    --grey-mid: #777777;
+    --grey-dark: #222222;
+    --black: #000000;
+    --shadow-mid: #22222210;
+    --shadow-dark: #22222222;
+    --transparent: #00000000;
+    --logo-width: 100px;
+    --header-height: 9em;
+    --header-height-s: 3em;
+}
+
+/* General plan container */
+.plan {
+    width: 100%;
+    color: #161515;
+    text-align: start;
+    opacity: 1;
+}
+
+/* Plan section styles */
+.plan_section {
+    width: 100%;
+    text-align: center;
+    margin-top: 170px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px; /* Responsive padding */
+}
+
+.plan_section h1 {
+    font-size: 34px;
+    color: var(--gold-dark);
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.plan_section p {
+    font-size: 15px;
+    width: 100%;
+    max-width: 750px; /* Ensures paragraph width adapts on smaller screens */
+    text-align: start;
+    line-height: 1.5;
+    color: var(--grey-dark);
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+/* Plan grid styles */
+.plan_grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures images wrap to the next line on smaller screens */
+    gap: 15px;
+    margin: 20px;
+}
+
+.plan_grid img {
+    width: 15%; /* Adjusted below for responsiveness */
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.plan_grid img:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* Modal Popup Styles */
+.image_popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup_inner {
+    position: relative;
+    max-width: 30%;
+    max-height: 90%;
+}
+
+.popup_inner img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.close_button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .plan_grid img {
+        width: 20%; /* Slightly larger images for medium-sized screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .plan_grid img {
+        width: 30%; /* Larger images on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .plan_grid img {
+        width: 55%; /* Almost full-width images on smaller mobile devices */
+    }
+    .plan_grid {
+        flex-direction: column;
+        margin-left: 110px;
+    }
+    .popup_inner {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+    }
+    
+}

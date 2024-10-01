@@ -41,7 +41,8 @@ body {
     left: 0;
     z-index: 100;
     height: var(--header-height);
-    background-color: var(--transparent);
+    background-color: rgb(51,51,51, .5);
+    /* background-color: var(--transparent); */
     transition: background-color 0.3s ease;
 }
 .header--opaque {
