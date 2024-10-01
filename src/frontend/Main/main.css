@@ -1,4 +1,4 @@
-/* Colours */
+/* Colors */
 :root {
     --gold: #D4B254;
     --gold-dark: #C19F41;
@@ -15,6 +15,7 @@
     --header-height: 9em;
     --header-height-s: 3em;
 }
+
 /* Typography */
 h1 {
     font-family: 'Open Sans', sans-serif;
@@ -60,6 +61,7 @@ h6 {
     line-height: 1.7em;
     color: var(--grey-mid);
 }
+
 /* Text Utilities */
 .text-gold {
     color: var(--gold);
@@ -97,21 +99,24 @@ h6 {
     margin-bottom: -.1em;
 }
 .main__blurb .article__picture img {
-    width:600px;
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
     transition: calc(-2em);
 }
 .main__blurb .article__content {
     flex-basis: 50%;
+    padding: 40px;
     order: 2;
     box-sizing: border-box;
 }
-.article__content h2{
+
+.main_blurb .article__content h2 {
     font-size: 25px;
     font-weight: 600;
 }
-.article__content h6{
+.main_blurb .article__content h6 {
     font-size: 12px;
-    width:500px;
+    width: 100%; /* Make it responsive */
 }
 .main__testimonials {
     width: auto;
@@ -133,111 +138,96 @@ h6 {
 }
 .main__gallery .article {
     display: flex;
-    flex-flow: row wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
-    width: 100%;
+    width: 60%;
+    margin: auto;
+}
+.main__gallery .article__picture {
+    flex: 0 1 25%;
+    margin: 1em; /* Spacing between images */
 }
 .main__gallery .article__picture img {
-    width: 200px;
-    padding: .4em;
-}
-/* Article Layout */
-.article {
-    display: flex;
-    text-align: inherit;
-    align-items: center;
-}
-/* Button Styles */
-.button1 {
-    color: var(--white);
-    background:var(--gold);
-    box-sizing: border-box;
-    border: solid var(--gold) 1px;
-    border-radius: 3em;
-    padding: 1.1em 4em;
-    margin: 2.5em;
-    box-shadow: 0 1px 4px 2px var(--shadow-mid);
-    transition: all .28s ease 0s;
-}
-.button1:focus {
-    outline: none;
-}
-.button1:hover {
-    color: var(--white);
-    background: var(--gold-dark);
-    border: solid var(--transparent) 1px;
-    box-shadow: 0 1px 2px 1px var(--shadow-dark);
-}
-.button-max {
-    color: var(--white);
-    background:var(--gold);
-    box-sizing: border-box;
-    border: solid var(--gold) 1px;
-    border-radius: 3em;
-    padding: 1.1em 4em;
-    box-shadow: 0 1px 4px 2px var(--shadow-mid);
-    transition: all .28s ease 0s;
-}
-.button-max:focus {
-    outline: none;
-}
-.button-max:hover {
-    color: var(--white);
-    background: var(--gold-dark);
-    border: solid var(--transparent) 1px;
-    box-shadow: 0 1px 2px 1px var(--shadow-dark);
-}
-.section-max{
-    font-size: 25px;
-    font-weight: 600;
-}
-.section-maxe{
-    text-align: center;
-    width: 100px;
-    border-bottom-right-radius: 40px;
-    border-top-left-radius: 40px;
-}
-/* ============================================================================== */
-footer {
-    height: auto; /* Let content determine height */
-    padding: 20px 0; /* Add padding for spacing */
     width: 100%;
-    background: var(--gold-dark);
-    color: white;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.main__gallery .article__picture img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--gold-dark);
+    color: var(--white);
+    padding: 2em 0;
     text-align: start;
+    margin-top: 40px;
 }
 .footer-section {
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap; /* Ensure the layout wraps on smaller screens */
-    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Stack on small screens */
+    max-width: 1200px;
+    margin: auto;
 }
-footer h4 {
+.footer-section h3,
+.footer-section h4 {
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    margin-bottom: 10px;
-}
-footer ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-.imga p {
-    font-size: 13px;
     text-align: start;
-    width: 500px;
-    margin: 10px 0;
+    margin-bottom: 0.5em;
 }
-.imga img {
-    width: 100px;
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: start;
 }
-.max {
-    padding-bottom: 10px;
+.footer-section ul li {
+    margin: 0.5em 0;
+    text-align: start;
 }
-/* ============================================================================== */
+.footer-section .imga {
+    width: 50%;
+}
+.imga p{
+    text-align: start;
+}
+
+/* Buttons */
+.button1 {
+    padding: 1em 5em;
+    background-color: var(--gold);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.button1:hover {
+    background-color: var(--gold-dark);
+}
+.button-max {
+    padding: 1em 1.5em;
+    border: 1px solid var(--gold);
+    background-color: transparent;
+    color: var(--gold);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.button-max:hover {
+    background-color: var(--gold);
+    color: var(--white);
+}
+
+/* Responsive Design */
 @media (max-width: 1024px) {
     .main__gallery .article__picture img {
-        width: 350px;
+        width: 100%;
+        height: auto;
     }
     .main__blurb .article__content {
         flex-basis: 100%;
@@ -251,10 +241,13 @@ footer ul {
     .footer-section {
         flex-direction: column;
         align-items: flex-start;
+        text-align: center;
     }
     
     .imga p {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%;
+        text-align: start;
+       
     }
     
     footer ul {
@@ -264,101 +257,81 @@ footer ul {
 
 @media (max-width: 768px) {
     .main__gallery .article__picture img {
-        width: 500px;
-    }
-    .main__testimonials .article__content {
-        width: 80%;
-    }
-    .article__content h6{
-        font-size: 12px;
-        text-align: start;
-        width:400px;
-        content:center;
-    }
-    .article__content h2{
-        text-align: start;
-        content:center;
-    }
-    .button-max {
-        padding: 1em 4em;
-    }
-    .section-max{
-        font-size: 25px;
-        text-align: start;
-    }
-    h5{
-        text-align: start;
-    }
-    .section-maxe{
-        text-align: center;
-        padding: 5px;
-        text-align: start;
-        width: 100px;
-        color: #8a7b7b;
-        border-bottom-right-radius: 10px;
-        border-top-left-radius: 10px;
-    }
-    .text-gold{
-        text-align: start;
-    }
-    .article__picture img{
-        width: fit-content;
-    }
-    
-    .footer-section {
-        text-align: center;
-        align-items: center;
-    }
-
-    .imga img, .imga p {
-        text-align: center;
         width: 100%;
     }
-
-    footer ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
+    .main__testimonials .article__content {
+        width: 90%;
     }
-
-    footer ul li {
-        margin-bottom: 10px;
+    .article__content h6 {
+        font-size: 1em; 
+        text-align: start;
     }
-    
-    div {
+    .article__content h2 {
+        text-align: start;
+    }
+    .button-max {
+        padding: 0.8em 2em; 
+    }
+    .section-max {
+        font-size: 1.5em; 
+        text-align: start;
+    }
+    .main__gallery .article {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    footer{
+        padding: 10px;
         text-align: center;
+    }
+    .footer-section .imga {
+        text-align: start;
+        width: 90%;
     }
 }
 
 @media (max-width: 480px) {
     .footer-section {
         padding: 10px;
+        flex-direction: column;
+        align-items: center;
     }
     
     .imga p {
         font-size: 12px;
         margin: 0;
+        text-align: start;
     }
 
     footer ul li h4 {
-        font-size: 16px;
+        font-size: 10px; 
+        
+    }
+    footer ul li{
+        text-align: start;
     }
 
     footer h4, footer h3 {
+        font-size: 12px; 
+    }
+    .footer-section .imga {
+        text-align: start;
+        width: 100%;
+    }
+    .main__gallery .article {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .main__testimonials h5 {
+       text-align: start;
+    }
+    .main__testimonials h3{
+        font-size: 17px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    h2{
         font-size: 18px;
     }
-    /* .main__testimonials {
-        width: 100%;
-        
-    }
-    .main__gallery{
-        width: 100%;
-    }
-    .footer{
-        width: 100%;
-    }
-    .main__gallery .article__picture img{
-     width:100%;
-    } */
 }
