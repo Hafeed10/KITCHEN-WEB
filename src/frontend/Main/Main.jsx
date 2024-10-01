@@ -77,12 +77,12 @@ function Main() {
       </section>
       {/* // The main__gallery Section End */}
 
-      {/* // The Footer Section Start */}
+     {/* // The Footer Section Start */}
       <footer>
         <div className="footer-section">
           <div className="imga">
             <img className="max" src="https://i.imgur.com/3zACXLF.png" alt="Logo" />
-            <p>
+             <p>
               A kitchen is a room or part of a room where food is prepared, cooked, and washed. Kitchens can be found in
               homes, restaurants, hospitals, schools, and other commercial establishments. A modern kitchen typically
               has: A stove, A sink with hot and cold water, A refrigerator, Worktops, and Cabinets.
