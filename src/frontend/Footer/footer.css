@@ -1,0 +1,123 @@
+/* Colours */
+:root {
+    --gold: #D4B254;
+    --gold-dark: #C19F41;
+    --green: #77DD22;
+    --white: #FFFFFF;
+    --grey-light: #EEEEEE;
+    --grey-mid: #777777;
+    --grey-dark: #222222;
+    --black: #000000;
+    --shadow-mid: #22222210;
+    --shadow-dark: #22222222;
+    --transparent: #00000000;
+    --logo-width: 100px;
+    --header-height: 9em;
+    --header-height-s: 3em;
+}
+/* Footer Styles */
+footer {
+    background-color: var(--gold-dark);
+    color: var(--white);
+    padding: 2em 0;
+    text-align: start;
+    margin-top: 40px;
+}
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Stack on small screens */
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-section h3,
+.footer-section h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: start;
+    margin-bottom: 0.5em;
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: start;
+}
+.footer-section ul li {
+    margin: 0.5em 0;
+    text-align: start;
+}
+.footer-section .imga {
+    width: 50%;
+}
+.imga p{
+    text-align: start;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-section {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+    .imga p {
+        width: 100%;
+        text-align: start;
+    }
+    
+    footer ul {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px) {
+    footer{
+        padding: 10px;
+        text-align: center;
+    }
+    .footer-section .imga {
+        text-align: start;
+        width: 90%;
+    }
+}
+@media (max-width: 480px) {
+    .footer-section {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .imga p {
+        font-size: 12px;
+        margin: 0;
+        text-align: start;
+    }
+    footer ul li h4 {
+        font-size: 10px; 
+        
+    }
+    footer ul li{
+        text-align: start;
+    }
+    footer h4, footer h3 {
+        font-size: 12px; 
+    }
+    .footer-section .imga {
+        text-align: start;
+        width: 100%;
+    }
+    .main__gallery .article {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .main__testimonials h5 {
+       text-align: start;
+    }
+    .main__testimonials h3{
+        font-size: 17px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    h2{
+        font-size: 18px;
+    }
+}

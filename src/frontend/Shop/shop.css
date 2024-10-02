@@ -15,14 +15,14 @@
     --header-height-s: 3em;
 }
 /* General plan container */
-.plan {
+.shop {
     width: 100%;
     color: #161515;
     text-align: start;
     opacity: 1;
 }
 /* Plan section styles */
-.plan_section {
+.shop_section {
     width: 100%;
     text-align: center;
     margin-top: 170px;
@@ -31,40 +31,41 @@
     flex-direction: column;
     align-items: center;
 }
-.plan_section h1 {
+.shop_section h1 {
     font-size: 34px;
     color: var(--gold-dark);
     font-weight: 300;
     text-transform: uppercase;
     margin: 10px 0;
 }
-.plan_section p {
+.shop_section p {
     font-size: 15px;
     width: 100%;
-    max-width: 750px; /* Ensures paragraph width adapts on smaller screens */
+    max-width: 580px; /* Ensures paragraph width adapts on smaller screens */
     text-align: start;
     line-height: 1.5;
     color: var(--grey-dark);
     font-weight: 300;
     margin: 10px 0;
+    float: right;
 }
 /* Plan grid styles */
-.plan_grid {
+.shop_grid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* Ensures images wrap to the next line on smaller screens */
     gap: 15px;
     margin: 20px;
 }
-.plan_grid img {
-    width: 15%; /* Adjusted below for responsiveness */
+.shop_grid img {
+    width: 20%; /* Adjusted below for responsiveness */
     height: auto;
-    cursor: pointer;
+    cursor: zoom-in;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
 }
-.plan_grid img:hover {
+.shop_grid img:hover {
     transform: scale(1.05);
 }
 /* Modal Popup Styles */
@@ -82,7 +83,7 @@
 }
 .popup_inner {
     position: relative;
-    max-width: 30%;
+    max-width: 50%;
     max-height: 90%;
 }
 .popup_inner img {
@@ -95,25 +96,66 @@
     top: 10px;
     right: 20px;
     font-size: 30px;
-    color: var(--black);
+    color: var(--white);
     cursor: pointer;
+}
+
+
+.main__blurbe .articlea {
+    display: flex;
+    flex-flow: row wrap;
+}
+.main__blurbe .article__picture {
+    overflow: hidden;
+    flex-basis: 50%;
+    order: 2;
+    margin-bottom: -.1em;
+}
+.main__blurbe .article__picture img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    transition: calc(-2em);
+}
+.main__blurbe .article__content {
+    flex-basis: 50%;
+    padding: 40px;
+    order: 2;
+    box-sizing: border-box;
+}
+
+.main_blurbe .article__content h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
+.main_blurbe .article__content h6 p{
+    font-size: 12px;
+    width: 400px; /* Make it responsive */
 }
 /* Media queries for responsiveness */
 @media (max-width: 1200px) {
-    .plan_grid img {
+    .shop_grid img {
         width: 20%; /* Slightly larger images for medium-sized screens */
+    }
+    .main__blurbe .article__content {
+        flex-basis: 100%;
+        order: 1;
+        padding: 4em 3em;
+    }
+    .main__blurbe .article__picture {
+        flex-basis: 100%;
+        order: 2;
     }
 }
 @media (max-width: 768px) {
-    .plan_grid img {
+    .shop_grid img {
         width: 30%; /* Larger images on tablets */
     }
 }
 @media (max-width: 480px) {
-    .plan_grid img {
+    .shop_grid img {
         width: 55%; /* Almost full-width images on smaller mobile devices */
     }
-    .plan_grid {
+    .shop_grid {
         flex-direction: column;
         margin-left: 110px;
     }

@@ -69,7 +69,6 @@ h6 {
     color: var(--grey-dark);
 }
 .main {
-    position: absolute;
     width: 100%;
 }
 .main__splash {
@@ -157,47 +156,12 @@ h6 {
     transform: scale(1.05);
 }
 
-/* Footer Styles */
-footer {
-    background-color: var(--gold-dark);
-    color: var(--white);
-    padding: 2em 0;
-    text-align: start;
-    margin-top: 40px;
-}
-.footer-section {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Stack on small screens */
-    max-width: 1200px;
-    margin: auto;
-}
-.footer-section h3,
-.footer-section h4 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    text-align: start;
-    margin-bottom: 0.5em;
-}
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: start;
-}
-.footer-section ul li {
-    margin: 0.5em 0;
-    text-align: start;
-}
-.footer-section .imga {
-    width: 50%;
-}
-.imga p{
-    text-align: start;
-}
+
 /* Buttons */
 .button1 {
-    padding: 1em 5em;
+    padding: 0.80em 5em;
     background-color: var(--gold);
+    text-decoration: none;
     color: var(--white);
     border: none;
     border-radius: 50px;
@@ -208,12 +172,13 @@ footer {
     background-color: var(--gold-dark);
 }
 .button-max {
-    padding: 1em 1.5em;
+    padding: 0.80em 5em;
     border: 1px solid var(--gold);
     background-color: transparent;
     color: var(--gold);
     border-radius: 50px;
     cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
 }
 .button-max:hover {
@@ -275,40 +240,8 @@ footer {
         flex-wrap: wrap;
         width: 100%;
     }
-    footer{
-        padding: 10px;
-        text-align: center;
-    }
-    .footer-section .imga {
-        text-align: start;
-        width: 90%;
-    }
 }
 @media (max-width: 480px) {
-    .footer-section {
-        padding: 10px;
-        flex-direction: column;
-        align-items: center;
-    }
-    .imga p {
-        font-size: 12px;
-        margin: 0;
-        text-align: start;
-    }
-    footer ul li h4 {
-        font-size: 10px; 
-        
-    }
-    footer ul li{
-        text-align: start;
-    }
-    footer h4, footer h3 {
-        font-size: 12px; 
-    }
-    .footer-section .imga {
-        text-align: start;
-        width: 100%;
-    }
     .main__gallery .article {
         flex-wrap: wrap;
         width: 100%;

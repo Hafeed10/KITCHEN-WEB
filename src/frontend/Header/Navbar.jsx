@@ -34,7 +34,7 @@ function Header({ headerOpaque }) {
             <Link to='/about' className="menu__iteme"><h4>About us</h4></Link>
             <Link to='/gallery' className="menu__iteme"><h4>Gallery</h4></Link>
             <Link to='/plan' className="menu__iteme"><h4>Plan my kitchen</h4></Link>
-            <li className="menu__item"><h4>Shop</h4></li>
+            <Link to='/shop' className="menu__iteme"><h4>Shop</h4></Link>
             <li className="menu__item">
               <button className="button">MY ORDER</button>
             </li>

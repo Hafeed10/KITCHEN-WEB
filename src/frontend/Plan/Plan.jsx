@@ -60,6 +60,7 @@ function Plan() {
           onClick={() => openImage(plan5)}
         />
       </div>
+      <h4 style={{textAlign: 'center'}}>Coming Soon ...</h4>
 
       {selectedImage && (
         <div className="image_popup" onClick={closePopup}>

@@ -5,6 +5,8 @@ import Main from '../src/frontend/Main/Main';
 import About from '../src/frontend/About/About';
 import Gallery from '../src/frontend/Gallery/Gallery'; // Example component for another route
 import Plan from '../src/frontend/Plan/Plan'; // Example component for another route
+import Footer from '../src/frontend/Footer/footer';
+import Shop from '../src/frontend/Shop/shop'; // Example component for'
 import './App.css';
 
 function App() {
@@ -36,8 +38,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/plan" element={<Plan />} />
+          <Route path="/shop" element={<Shop />} />
         </Routes>
       </div>
+        <Footer/>
     </Router>
   );
 }
