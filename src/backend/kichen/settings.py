@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'kichen.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',  # Use PostgreSQL backend
+        'NAME': 'Kichen',  # Replace with your database name
+        'USER': 'your_database_user',  # Replace with your database user
+        'PASSWORD': 'your_password',  # Replace with your password
+        'HOST': 'localhost',  # Typically 'localhost' or your database server
+        'PORT': '5432',  # Default PostgreSQL port is 5432
     }
 }
 
@@ -128,7 +132,7 @@ BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
 MEDID_ROOT = BASE_DIR / 'media'
- 
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

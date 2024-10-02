@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import routing components
-import Navbar from './frontend/Header/Navbar';
-import Main from '../src/frontend/Main/Main';
-import About from '../src/frontend/About/About';
-import Gallery from '../src/frontend/Gallery/Gallery'; // Example component for another route
-import Plan from '../src/frontend/Plan/Plan'; // Example component for another route
-import Footer from '../src/frontend/Footer/footer';
-import Shop from '../src/frontend/Shop/shop'; // Example component for'
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./frontend/Header/Navbar";
+import Main from "./frontend/Main/Main"; // Adjusted path
+import About from "./frontend/About/About";
+import {GalleryWithPopup} from "./frontend/Gallery/Gallery"; // Ensure GalleryWithPopup is correctly exported
+import Plan from "./frontend/Plan/Plan";
+import Footer from "./frontend/Footer/footer";
+import Shop from "./frontend/Shop/shop"; // Ensure paths are correct
+// import Contact from "./frontend/Contact/contact"; // If unused, keep commented out
+import "./App.css";
 
 function App() {
   const [headerOpaque, setHeaderOpaque] = useState(false);
 
+  // Handle header opacity on scroll
   const handleScroll = () => {
     if (window.pageYOffset > 50) {
       setHeaderOpaque(true);
@@ -21,27 +23,31 @@ function App() {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <Router>
       <div>
-         <Navbar headerOpaque={headerOpaque} />
+        {/* Navbar with dynamic opacity */}
+        <Navbar headerOpaque={headerOpaque} />
 
         {/* Define routes for different components */}
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/gallery" element={<GalleryWithPopup />} />
           <Route path="/plan" element={<Plan />} />
           <Route path="/shop" element={<Shop />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
         </Routes>
       </div>
-        <Footer/>
+
+      {/* Footer component */}
+      <Footer />
     </Router>
   );
 }
