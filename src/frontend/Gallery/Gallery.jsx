@@ -27,6 +27,11 @@ function Gallery({ openImage }) {
             alt="Gallery image 4"
             onClick={() => openImage('https://i.imgur.com/yP79MAU.png')}
           />
+          <img
+            src="https://i.imgur.com/wfR2hs8.png"
+            alt="Gallery image 3"
+            onClick={() => openImage('https://i.imgur.com/wfR2hs8.png')}
+          />
         </div>
         <h4>Coming Soon ...</h4>
       </div>
