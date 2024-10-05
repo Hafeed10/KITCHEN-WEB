@@ -43,16 +43,17 @@ function Main() {
           <picture className="article__picture">
             <img src="https://i.imgur.com/TLkkTWR.png" alt="Example kitchen" />
           </picture>
-          {item.length > 0 && (
             <div className="article__content">
               <h4 className="text-gold">Quality Craftmanship from build to delivery</h4>
-              <h2>{item[0]?.name}</h2>
-              <h6>{item[0]?.description}</h6>
+              <h2>Discover the beauty of a kitchen</h2>
+              <h6>shop'kitchen
+              Our knowledgeable staff is always on hand to provide expert advice and support, 
+              ensuring you find exactly what you need. With competitive prices and a commitment to excellent customer service, Feel free to customize this with specific details about your shop, such as the types of products or services you offer, your location, or 
+              any unique selling points. Let me know if you’d like to refine it further!</h6>
               <div className='button_logic'>
                 <Link to='/about' className="button-max">About Us</Link>
               </div>
             </div>
-          )}
         </article>
       </section>
       {/* // The main__blurb Section End */}
