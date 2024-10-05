@@ -7,31 +7,20 @@ import plan2 from '../../assets/plan-2.jpg';
 import plan3 from '../../assets/plan-3.webp';
 import plan4 from '../../assets/plan4.jpg';
 import plan5 from '../../assets/plan-5.jpg';
+import WithPopupAnim from '../HOC/WithPopupAnim';
 
-function Plan() {
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  // Function to handle image click
-  const openImage = (src) => {
-    setSelectedImage(src);
-  };
-
-  // Function to close the image popup
-  const closePopup = () => {
-    setSelectedImage(null);
-  };
-
+function Plan({openImage,selectedImage,closePopup}) {
   return (
     <div className='plan'>
       <div className="plan_section">
         <h1>Our Plans</h1>
         <p>
-          Shape and Configuration: The kitchen layout defines the overall structure, 
-          which could be U-shaped, L-shaped, Galley, One-wall, or Island kitchen. This 
+          Shape and Configuration: The kitchen layout defines the overall structure,
+          which could be U-shaped, L-shaped, Galley, One-wall, or Island kitchen. This
           depends on the available space and usage requirements.
         </p>
       </div>
-      
+
       <div className='plan_grid'>
         {/* Use local images */}
         <img
@@ -61,17 +50,9 @@ function Plan() {
         />
       </div>
       <h4 style={{textAlign: 'center'}}>Coming Soon ...</h4>
-
-      {selectedImage && (
-        <div className="image_popup" onClick={closePopup}>
-          <div className="popup_inner">
-            <img src={selectedImage} alt="Selected" />
-            <span className="close_button" onClick={closePopup}>&times;</span>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
 
 export default Plan;
+export const PlanWithPopup = WithPopupAnim(Plan, { closeButtonStyle: { color: 'black' } });

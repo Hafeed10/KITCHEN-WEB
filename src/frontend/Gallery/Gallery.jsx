@@ -1,7 +1,8 @@
 import './gallery.css';
-import WithPopupAnim from '../HOT/WithPopupAnim';
+import WithPopupAnim from '../HOC/WithPopupAnim';
 
 function Gallery({ openImage }) {
+  
   return (
     <div className="gallery">
       <div className="gallery_section">
@@ -40,4 +41,4 @@ function Gallery({ openImage }) {
 }
 
 export default Gallery;
-export const GalleryWithPopup = WithPopupAnim(Gallery);
+export const GalleryWithPopup = WithPopupAnim(Gallery, { closeButtonStyle: { color: 'white' } });

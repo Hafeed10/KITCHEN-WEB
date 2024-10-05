@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'; // Import axios
 import './main.css';
 import { Link } from 'react-router-dom';
 
 function Main() {
+  const [item, setItem] = useState([]); // Assuming the response will be an array
+  const [error, setError] = useState(null);
+  
+
+  const fetchItem = async () => {
+    try {
+      const response = await axios.get('http://localhost:8000/api/'); // axios GET request to the API
+      setItem(response.data); // response.data contains the actual data
+    } catch (err) {
+      console.error('Error fetching data:', err.message);
+      setError('Failed to fetch data. Please try again later.');
+    }
+  };
+
+  useEffect(() => {
+    fetchItem(); // Fetch the data when the component mounts
+  }, []);
+
   return (
     // The Main Section Start
     <main className="main">
@@ -24,18 +43,16 @@ function Main() {
           <picture className="article__picture">
             <img src="https://i.imgur.com/TLkkTWR.png" alt="Example kitchen" />
           </picture>
-          <div className="article__content">
-            <h4 className="text-gold">Quality Craftmanship from build to delivery</h4>
-            <h2>Discover the beauty of a handmade kitchen</h2>
-            <h6>
-              A kitchen is a room or part of a room where food is prepared, cooked, and washed. Kitchens can be found
-              in homes, restaurants, hospitals, schools, and other commercial establishments. A modern kitchen typically
-              has: A stove, A sink with hot and cold water, A refrigerator, Worktops, and Cabinets.
-            </h6>
-            <div className='button_logic'>
-            <Link to='/about' className="button-max">About Us</Link>
+          {item.length > 0 && (
+            <div className="article__content">
+              <h4 className="text-gold">Quality Craftmanship from build to delivery</h4>
+              <h2>{item[0]?.name}</h2>
+              <h6>{item[0]?.description}</h6>
+              <div className='button_logic'>
+                <Link to='/about' className="button-max">About Us</Link>
+              </div>
             </div>
-          </div>
+          )}
         </article>
       </section>
       {/* // The main__blurb Section End */}
@@ -47,8 +64,7 @@ function Main() {
             <h4 className="text-gold">What Our Customers Say</h4>
             <h3 className="section-max">Over 10 years experience designing</h3>
             <h5>
-              Since my first contact I have received a very high level of customer service and advice with my kitchen
-              plans.
+              Since my first contact I have received a very high level of customer service and advice with my kitchen plans.
             </h5>
             <h6 className="section-maxe">Muhammed Hafeex , Palakkad</h6>
             <button className="button-max">Frequently Asked Questions</button>

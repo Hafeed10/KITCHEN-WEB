@@ -68,36 +68,49 @@
     transform: scale(1.05);
 }
 /* Modal Popup Styles */
-.image_popup {
+/* plan.css */
+
+/* Popup Container */
+.popup {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
-}
-.popup_inner {
+    z-index: 1000;
+  }
+
+  /* Popup Content */
+  .popup_inner {
     position: relative;
-    max-width: 30%;
-    max-height: 90%;
-}
-.popup_inner img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .popup_inner img {
     max-width: 100%;
     max-height: 100%;
-    border-radius: 10px;
-}
-.close_button {
+  }
+
+  /* Close Button Styling */
+  .close {
     position: absolute;
     top: 10px;
-    right: 20px;
-    font-size: 30px;
-    color: var(--black);
+    right: 10px;
+    font-size: 24px;
     cursor: pointer;
-}
+    color: inherit; /* This will inherit the color set by the parent component */
+  }
+
+  /* Optional: Add some hover effect to the close button */
+  .close:hover {
+    color: red; /* Change color on hover if desired */
+  }
+
 /* Media queries for responsiveness */
 @media (max-width: 1200px) {
     .plan_grid img {
